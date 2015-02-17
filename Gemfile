@@ -24,6 +24,7 @@ group :development do
   gem 'mailcatcher'
 end
 
+gem 'bootstrap-sass', '~> 3.3.3'
 gem "font-awesome-rails"
 gem 'formtastic-bootstrap', '2.1.3'
 gem 'formtastic', '2.2.1'
