@@ -29,7 +29,7 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'rspec'
+  gem 'rspec-rails'
   gem 'poltergeist'
   gem 'guard-spork'
   gem 'guard-rspec'

@@ -9,16 +9,10 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     registration_params = [:email, :password, :password_confirmation, :username, :name]
 
-    devise_parameter_sanitizer.for(:sign_up) do |u|
-      u.permit(registration_params)
-    end
-
-    devise_parameter_sanitizer.for(:account_update) do |u|
-      u.permit(registration_params)
-    end
-    
-    devise_parameter_sanitizer.for(:sign_in) do |u|
-      u.permit(registration_params)
+    [:sign_in, :sign_up, :account_update].each do |method_name|
+      devise_parameter_sanitizer.for(method_name) do |u|
+        u.permit(method_name == :sign_in ? registration_params << :remember_me : registration_params )
+      end
     end
   end
 end
