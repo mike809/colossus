@@ -2,9 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.8'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'rails', '4.2.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
@@ -12,7 +10,7 @@ gem 'sqlite3'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-# gem 'turbolinks'
+gem 'turbolinks'
 # # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.0'
 # # bundle exec rake doc:rails generates the API under doc/api.
@@ -29,9 +27,9 @@ gem 'formtastic-bootstrap', '2.1.3'
 gem 'formtastic', '2.2.1'
 gem 'cancan'
 gem 'slim-rails'
-# gem 'devise', '~> 2.0.6'
-# gem 'devise_invitable', '~> 1.0.0'
-# gem 'devise-async', '~> 0.5.0'
+gem 'devise'
+gem 'devise_invitable'
+gem 'devise-async'
 
 group :test, :development do
   gem 'factory_girl_rails'
@@ -39,6 +37,7 @@ group :test, :development do
   gem 'byebug'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'sqlite3'
 end
 
 group :test do
@@ -55,8 +54,11 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0'
 end
 
+group :production do
+    gem 'pg'
+end
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt'
 
 # Use unicorn as the app server
 # gem 'unicorn'
