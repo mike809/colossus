@@ -320,6 +320,7 @@ DEPENDENCIES
   pg
   poltergeist
   rails (= 4.2.0)
+  rspec
   rspec-rails
   sass-rails (~> 4.0.3)
   slim-rails
