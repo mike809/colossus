@@ -36,6 +36,7 @@ group :test do
   gem 'guard-spork'
   gem 'guard-rspec'
   gem 'timecop'
+  gem 'faker'
 end
 
 group :assets do
