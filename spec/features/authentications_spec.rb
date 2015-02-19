@@ -1,6 +1,9 @@
+include Warden::Test::Helpers
 require 'rails_helper'
 require 'spec_helper'
 
+Warden.test_reset! 
+Warden.test_mode!
 
 feature "Authentications", type: :feature, driver: :chrome do
   context 'user creation' do
