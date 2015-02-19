@@ -27,13 +27,13 @@ group :test, :development do
   gem 'binding_of_caller'
   gem 'sqlite3'
   gem 'rspec'
+  gem 'selenium-webdriver'
   gem 'rspec-rails'
 end
 
 group :test do
   gem 'capybara'
   gem 'poltergeist'
-  gem 'guard-spork'
   gem 'guard-rspec'
   gem 'timecop'
   gem 'faker'
