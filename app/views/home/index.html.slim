@@ -1,2 +1,10 @@
 body
   canvas id='my_canvas'
+- if user_signed_in?
+    li
+    = link_to('Logout', destroy_user_session_path, :method => :delete)      
+    li
+    = link_to "Edit account info", edit_user_registration_path
+- else
+    li
+    = link_to('Login', new_user_session_path)
